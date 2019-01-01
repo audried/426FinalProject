@@ -18,7 +18,7 @@ class SearchPage extends Component{
     
     handleChange(event) {
         this.setState({value: event.target.value});
-
+        this.setState({searchedclasses: this.props.classes.filter(c=>c.id.toUpperCase().includes(this.state.value.toUpperCase()))})
         //this.state.value is what is currently typed in box
         //this.props.classes ~will~ be json array of classes 
         
@@ -35,7 +35,7 @@ class SearchPage extends Component{
         console.log(this.state.value.toUpperCase());
         //should set state of searched classes to ones that match this.state.value
         //this.props.filter (matching this.state.value = searchedclasses)
-        this.setState({searchedclasses: this.props.classes})
+        this.setState({searchedclasses: this.props.classes.filter(c=>c.id.toUpperCase().includes(this.state.value.toUpperCase()))})
     }
    
     
@@ -49,8 +49,8 @@ class SearchPage extends Component{
                 <div className="control">
                     <input className="input" type="text" id="filler" placeholder="Search for a class" value={this.state.value} onChange={this.handleChange}></input>
                 </div>
-                <div class="control">
-                    <a class="button is-info" id="search" onClick={this.handleSubmit}>Search</a>
+                <div className="control">
+                    <a className="button is-info" id="search" onClick={this.handleSubmit}>Search</a>
                 </div>
             </div> 
            

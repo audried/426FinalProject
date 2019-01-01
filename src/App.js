@@ -13,20 +13,30 @@ class App extends Component {
     this.state={
       classes:[],
       loggedin:false,
-      tok: ""
+      tok: "",
+      joinedclasses:[]
     }
   }
 
-  componentDidMount(){
+  componentWillMount(){
     //get class list here
     //this.setState({classes: classList})
+    this.setState({classes:compclasses})
     if (window.location.search){
       this.setState({loggedin:true, tok: window.location.search});
       // axios.get('http://localhost:8080/')
       //   .then(response => this.setState({classes: response.data}) )
     }
-    this.setState({classes:compclasses})
   }
+
+  componentDidMount(){
+    if(this.state.tok.length >1){
+      console.log('hi')
+      axios.get(`https://api.groupme.com/v3/groups${this.state.tok}`,{'Access-Control-Allow-Origin':'*', params:{per_page:100} })
+      .then(res=>this.setState({ joinedgroups:res.data.response  }))
+    }
+  }
+  
 
 
   render(){
@@ -47,7 +57,7 @@ class App extends Component {
       
     {this.state.loggedin &&
       <div className="App container">
-        <SearchPage classes={this.state.classes} tok = {this.state.tok}/>
+        <SearchPage classes={this.state.classes} tok = {this.state.tok} joinedgroups={this.state.joinedgroups}/>
       </div>
     }
     </div>
