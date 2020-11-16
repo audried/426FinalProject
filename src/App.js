@@ -1,27 +1,19 @@
-import React from 'react';
-import './App.scss';
-import Button from 'react-bulma-components/lib/components/button';
-import { Field, Control, Input} from 'react-bulma-components/lib/components/form';
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
+import 'bulma/css/bulma.css';
+import { Link, BrowserRouter, Route } from 'react-router-dom';
+import Search from "./Search"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Search for your classes
-        </p>
-        
-        <Field className="has-addons">
-          <Control>
-            <Input/>
-          </Control>
-          <Control>
-            <Button className="is-info">Go</Button>
-          </Control>
-        </Field>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+  render(){
+    return (
+      <div className="App container">
+        <Search/>
+      </div>
+    );
+  }
 }
 
 export default App;
