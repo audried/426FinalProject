@@ -38,3 +38,19 @@
     transform: rotate(360deg);
   }
 }
+
+.homepage{
+  display:flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2em;
+}
+
+.boxcontainer{
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 3em;
+  padding-top: 4em;
+}
