@@ -25,7 +25,7 @@ class App extends Component {
     <div>
       <div className="BannerContainer">
         <Banner/>
-      </div>
+      </div> 
 
       <div className="App container">
         <SearchPage classes={this.state.classes}/>

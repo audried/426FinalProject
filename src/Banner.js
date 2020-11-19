@@ -12,5 +12,5 @@ class Banner extends Component{
             </div>
         )
     }
-}
+}  
 export default Banner;
