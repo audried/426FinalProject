@@ -29,7 +29,7 @@ class Box extends Component{
                     <p className="title">{this.props.c.name}</p>
                     <p className="subtitle">{this.props.c.enrolled} enrolled</p>
                     <p className="subtitle">{this.props.c.groupMe} in GroupMe</p>
-                    <button className="button is-info">click to join</button>
+                    <button className="button is-info" id="join">click to join</button>
                 </article>
             </div>
             

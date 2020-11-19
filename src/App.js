@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import 'bulma/css/bulma.css';
 import SearchPage from "./SearchPage";
+import Banner from "./Banner";
 import classList from './classes.json';
 
 class App extends Component {
@@ -21,9 +22,17 @@ class App extends Component {
 
   render(){
     return (
+    <div>
+      <div className="BannerContainer">
+        <Banner/>
+      </div>
+
       <div className="App container">
         <SearchPage classes={this.state.classes}/>
       </div>
+
+    </div>
+      
     );
   }
 }
