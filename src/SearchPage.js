@@ -39,10 +39,10 @@ class SearchPage extends Component{
             
             <div className="field has-addons">
                 <div className="control">
-                    <input className="input" type="text" placeholder="Search for a class" value={this.state.value} onChange={this.handleChange}></input>
+                    <input className="input" type="text" id="filler" placeholder="Search for a class" value={this.state.value} onChange={this.handleChange}></input>
                 </div>
                 <div class="control">
-                    <a class="button is-info" onClick={this.handleSubmit}>Search</a>
+                    <a class="button is-info" id="search" onClick={this.handleSubmit}>Search</a>
                 </div>
             </div> 
 
