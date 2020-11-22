@@ -29,7 +29,7 @@ class SearchPage extends Component{
 
     handleSubmit(e){
         e.preventDefault();
-        console.log(this.state.value);
+        console.log(this.state.value.toUpperCase());
         //should set state of searched classes to ones that match this.state.value
         this.setState({searchedclasses: this.props.classes})
     }
@@ -48,8 +48,11 @@ class SearchPage extends Component{
             </div> 
 
             <div className = "boxcontainer tile is-ancestor">
-                {this.state.searchedclasses.map(c =>
-                    <Box c = {c}/>
+                
+                {this.state.searchedclasses.map(d =>
+                    d.courses.map(c=>
+                        <Box c = {c}></Box>
+                    )
                 )}
             </div>
 
