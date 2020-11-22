@@ -3,14 +3,14 @@ import './App.css';
 import 'bulma/css/bulma.css';
 import SearchPage from "./SearchPage";
 import Banner from "./Banner";
-import classList from './classes.json';
+import axios from 'axios';
 
 class App extends Component {
 
   constructor(props){
     super(props)
     this.state={
-      classes:classList,
+      classes:[],
       loggedin:false,
       tok: ""
     }
@@ -22,6 +22,8 @@ class App extends Component {
     //this.setState({classes: classList})
     if (window.location.search){
       this.setState({loggedin:true, tok: window.location.search});
+      axios.get('http://localhost:8080/')
+        .then(response => this.setState({classes: response.data}))
     }
     
   }

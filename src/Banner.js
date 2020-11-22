@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Box from './Box';
 
 class Banner extends Component{
  

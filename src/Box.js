@@ -15,9 +15,7 @@ class Box extends Component{
         this.state={
             enrolled:0
         }
-        
         this.join = this.join.bind(this);
-
     }
 
     componentDidMount(){
