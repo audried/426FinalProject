@@ -1,7 +1,9 @@
 [
     {"name":"COMP 401",
     "enrolled":400,
-    "groupMe":216},
+    "groupMe":216,
+    "groupId" :""    
+    },
 
     {"name":"COMP 411",
     "enrolled":400,

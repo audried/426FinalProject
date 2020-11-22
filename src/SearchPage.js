@@ -30,6 +30,7 @@ class SearchPage extends Component{
     handleSubmit(e){
         e.preventDefault();
         console.log(this.state.value);
+        //should set state of searched classes to ones that match this.state.value
         this.setState({searchedclasses: this.props.classes})
     }
    
