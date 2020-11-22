@@ -1,52 +1,90 @@
 [
-    {"name":"COMP 401",
-    "enrolled":400,
-    "groupMe":216,
-    "groupId" :""    
+    {"letter":"A",
+        "dept":"Aerospace Studies",
+        "acc":"AERO",
+        "courses" :[
+            {
+                "cid":"AERO101",
+                "name":"Introduction to Aerospace studies",
+                "hours":1,
+                "GMID": 0
+            },
+            {
+                "cid":"AERO102",
+                "name":"Space and Society",
+                "hours":3,
+                "GMID": 0
+            }
+        ]    
     },
 
-    {"name":"COMP 411",
-    "enrolled":400,
-    "groupMe":216},
-
-    {"name":"COMP 410",
-    "enrolled":400,
-    "groupMe":216},
-
-    {"name":"COMP 455",
-    "enrolled":400,
-    "groupMe":216},
+    {"letter":"A",
+        "dept":"Astronomy",
+        "acc":"ASTR",
+        "courses" :[
+            {
+                "cid":"ASTR101",
+                "name":"Introduction to Astronomy",
+                "hours":1,
+                "GMID": 0
+            },
+            {
+                "cid":"ASTR102",
+                "name":"The Night Sky",
+                "hours":1,
+                "GMID": 0
+            }
+        ]    
+    },
     
-    {"name":"COMP 426",
-    "enrolled":400,
-    "groupMe":216},
-
-    {"name":"COMP 521",
-    "enrolled":400,
-    "groupMe":216},
-
-    {"name":"COMP 488",
-    "enrolled":400,
-    "groupMe":216},
-    
-    {"name":"COMP 530",
-    "enrolled":400,
-    "groupMe":216},
-
-    {"name":"COMP 541",
-    "enrolled":400,
-    "groupMe":216},
-
-    {"name":"COMP 560",
-    "enrolled":400,
-    "groupMe":216},
-    
-    {"name":"COMP 562",
-    "enrolled":400,
-    "groupMe":216},
-
-    {"name":"COMP 590",
-    "enrolled":400,
-    "groupMe":216}
+    {"letter":"C",
+        "dept":"Computer Science",
+        "acc":"COMP",
+        "courses" :[
+            {
+                "cid":"COMP101",
+                "name":"class name",
+                "hours":3,
+                "GMID": 0
+            },
+            {
+                "cid":"COMP110",
+                "name":"class name",
+                "hours":3,
+                "GMID": 0
+            },
+            {
+                "cid":"COMP116",
+                "name":"class name",
+                "hours":3,
+                "GMID": 0
+            },
+            {
+                "cid":"COMP401",
+                "name":"class name",
+                "hours":3,
+                "GMID": 0
+            },
+            {
+                "cid":"COMP410",
+                "name":"class name",
+                "hours":3,
+                "GMID": 0
+            },
+            {
+                "cid":"COMP411",
+                "name":"class name",
+                "hours":3,
+                "GMID": 0
+            },
+            {
+                "cid":"COMP455",
+                "name":"class name",
+                "hours":3,
+                "GMID": 0
+            }
+            
+        ]    
+    }
 
 ]
