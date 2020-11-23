@@ -22,13 +22,14 @@ class Box extends Component{
     }
 
     componentDidMount(){
-        //get group info
-        //if GMID: make api request to get # of members
-        // axios.get(`https://api.groupme.com/v3/groups/${this.props.c.gmid}${this.props.tok}`,{})
-        // .then(res=> console.log(res))
+    
         if (this.props.groupinfo){
-            this.setState({joined:1})
-            console.log("prop group info: "+this.props.groupinfo.name)
+            console.log(this.props.groupinfo)
+            if (this.props.groupinfo.length>0){
+                this.setState({joined:1})
+               
+            }
+            
         }
     }
 
@@ -47,7 +48,9 @@ class Box extends Component{
                 <article className="tile is-child box">
                     <p className="title">{this.props.c.id}</p>
                     <p className="subtitle">{this.props.c.name} </p>
-                    {this.props.groupinfo && <p className="subtitle">{this.props.groupinfo.members.length} in GroupMe</p>}
+                    
+
+                    {this.state.joined==1 && this.props.groupinfo &&this.props.groupinfo.length>0 && <p className="subtitle">{this.props.groupinfo[0].members.length} in GroupMe</p>}
 
                     {this.state.joined==0 && <button className="button is-info" id="join" onClick={this.join}>click to join</button>}
                     {this.state.joined==1 && <button className="button " id="joined" >joined</button>}
