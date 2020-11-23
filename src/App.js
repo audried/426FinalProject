@@ -14,7 +14,6 @@ class App extends Component {
       loggedin:false,
       tok: ""
     }
-
   }
 
   componentDidMount(){

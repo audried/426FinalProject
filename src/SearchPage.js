@@ -49,10 +49,8 @@ class SearchPage extends Component{
 
             <div className = "boxcontainer tile is-ancestor">
                 
-                {this.state.searchedclasses.map(d =>
-                    d.courses.map(c=>
-                        <Box c = {c}></Box>
-                    )
+                {this.state.searchedclasses.map(c =>
+                    <Box c = {c} tok={this.props.tok}></Box>
                 )}
             </div>
 
