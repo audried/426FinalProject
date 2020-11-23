@@ -22,7 +22,7 @@ class App extends Component {
     if (window.location.search){
       this.setState({loggedin:true, tok: window.location.search});
       axios.get('http://localhost:8080/')
-        .then(response => this.setState({classes: response.data}))
+        .then(response => this.setState({classes: response.data}) )
     }
     
   }

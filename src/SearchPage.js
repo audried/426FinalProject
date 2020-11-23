@@ -1,6 +1,8 @@
+import Axios from 'axios';
 import React, { Component } from 'react';
 import './App.css';
 import Box from './Box';
+import axios from 'axios';
 
 class SearchPage extends Component{
     constructor(props){
@@ -13,7 +15,7 @@ class SearchPage extends Component{
         this.handleSubmit = this.handleSubmit.bind(this);
 
     }
-
+    
     handleChange(event) {
         this.setState({value: event.target.value});
 
@@ -25,6 +27,7 @@ class SearchPage extends Component{
         //if we want classes to pop up while typing like coursicle:
         //TODO: set this.state.searchedClasses to classes that meet current search
     }
+    
 
 
     handleSubmit(e){
@@ -34,7 +37,10 @@ class SearchPage extends Component{
         this.setState({searchedclasses: this.props.classes})
     }
    
+    
+
     render(){
+        console.log(JSON.stringify(this.state.searchedclasses))
         return(
             <div className="homepage">
             
@@ -46,13 +52,14 @@ class SearchPage extends Component{
                     <a class="button is-info" id="search" onClick={this.handleSubmit}>Search</a>
                 </div>
             </div> 
+           
 
             <div className = "boxcontainer tile is-ancestor">
-                
                 {this.state.searchedclasses.map(c =>
                     <Box c = {c} tok={this.props.tok}></Box>
                 )}
             </div>
+
 
             </div>
             
