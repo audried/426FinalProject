@@ -34,6 +34,7 @@ class SearchPage extends Component{
         e.preventDefault();
         console.log(this.state.value.toUpperCase());
         //should set state of searched classes to ones that match this.state.value
+        //this.props.filter (matching this.state.value = searchedclasses)
         this.setState({searchedclasses: this.props.classes})
     }
    

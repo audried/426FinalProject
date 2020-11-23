@@ -7,7 +7,8 @@ import axios from 'axios'
 //     "cid":"ASTR101",
 //     "name":"Introduction to Astronomy",
 //     "hours":1,
-//     "GMID": 0
+//     "GMID": 0,
+//     "share_token":"sgdhhsjh"
 // }
 
 class Box extends Component{
@@ -24,25 +25,10 @@ class Box extends Component{
         //if GMID: make api request to get # of members
     }
 
-    join(){
-        //request to join group
-        //console.log("join request: "+this.props.c.cid)
-        //if GMID: send join request
-        axios.post(`https://api.groupme.com/v3/groups${this.props.tok}`, {
-            "name": this.props.c.id,
-            "share": true,
-            "image_url": "https://i.groupme.com/123456789"
-        })
-       .then(res => console.log(res.data.response.id));
-       
-
-
-
-        //if GMID=0: create group request, set course.GMID
-        // axios.put('http://localhost:8080/COMP130', { data:{}, query:{gmid: 12345}})
-        // axios.put('http://localhost:8080/COMP140?gmid=12345')
-        // .then(res => console.log(res))
-
+    join(){  
+       axios.post(`https://api.groupme.com/v3/groups/${this.props.c.gmid}/join/${this.props.c.share_token}${this.props.tok}`, {  
+       })
+      .then(res => console.log(res.data.response));
     }
     
     render(){
