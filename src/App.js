@@ -33,7 +33,7 @@ class App extends Component {
     if(this.state.tok.length >1){
       console.log('hi')
       axios.get(`https://api.groupme.com/v3/groups${this.state.tok}`,{'Access-Control-Allow-Origin':'*', params:{per_page:100} })
-      .then(res=>this.setState({ joinedgroups:res.data.response  }))
+      .then(res=>this.setState({ joinedclasses:res.data.response  }))
     }
   }
   
@@ -57,7 +57,7 @@ class App extends Component {
       
     {this.state.loggedin &&
       <div className="App container">
-        <SearchPage classes={this.state.classes} tok = {this.state.tok} joinedgroups={this.state.joinedgroups}/>
+        <SearchPage classes={this.state.classes} tok = {this.state.tok} joinedclasses={this.state.joinedclasses}/>
       </div>
     }
     </div>

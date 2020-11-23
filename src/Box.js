@@ -26,7 +26,12 @@ class Box extends Component{
         //if GMID: make api request to get # of members
         // axios.get(`https://api.groupme.com/v3/groups/${this.props.c.gmid}${this.props.tok}`,{})
         // .then(res=> console.log(res))
+        if (this.props.groupinfo){
+            this.setState({joined:1})
+            console.log("prop group info: "+this.props.groupinfo.name)
+        }
     }
+
 
     join(){  
        axios.post(`https://api.groupme.com/v3/groups/${this.props.c.gmid}/join/${this.props.c.share_token}${this.props.tok}`, {  
@@ -42,7 +47,7 @@ class Box extends Component{
                 <article className="tile is-child box">
                     <p className="title">{this.props.c.id}</p>
                     <p className="subtitle">{this.props.c.name} </p>
-                    <p className="subtitle">{this.state.enrolled} in GroupMe</p>
+                    {this.props.groupinfo && <p className="subtitle">{this.props.groupinfo.members.length} in GroupMe</p>}
 
                     {this.state.joined==0 && <button className="button is-info" id="join" onClick={this.join}>click to join</button>}
                     {this.state.joined==1 && <button className="button " id="joined" >joined</button>}
