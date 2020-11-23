@@ -6,7 +6,7 @@ class Banner extends Component{
     render(){
         return(
             <div className="banner">
-                <p>Heel Course ConnectMe</p>
+                <p>Carolina COMP Course ConnectMe</p>
                 <img src="https://coursedesignmatters.files.wordpress.com/2016/12/groupme2012.png?w=640" className="logo"></img>
             </div>
         )
