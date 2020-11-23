@@ -9,7 +9,8 @@ class SearchPage extends Component{
         super(props)
         this.state={
             value:"",
-            searchedclasses:[]
+            searchedclasses:[],
+            groups:{}
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -27,6 +28,21 @@ class SearchPage extends Component{
         //if we want classes to pop up while typing like coursicle:
         //TODO: set this.state.searchedClasses to classes that meet current search
     }
+    // componentDidMount(){
+    //     var groups={}
+    //     if (this.props.joinedclasses.length >0){
+    //         // console.log(typeof this.props.joinedclasses[10].id)
+    //         // let filtered = this.props.classes.filter(c=>c.gmid.toString()===this.props.joinedclasses[10].id)
+    //         // console.log("MATCH: "+filtered[0].id)
+    //         for (let i = 0; i<this.props.classes.length; i++){
+    //             let filtered = this.props.joinedclasses.filter(j=>{
+    //                 return j.id==(this.props.classes[i].gmid.toString())
+    //             })
+    //             groups[this.props.classes[i].gmid.toString()] = filtered 
+    //         }
+
+    //     }
+    // }
     
 
 
@@ -41,7 +57,19 @@ class SearchPage extends Component{
     
 
     render(){
-        console.log(this.props.joinedclasses)
+        
+        //console.log(typeof this.props.classes[10].gmid)
+        
+        // let target = this.props.classes[10].gmid
+        // if (this.props.joinedclasses.length >0){
+        //     let groupinfo = this.props.classes.map(c=> {
+        //         this.props.joinedclasses.filter(j=> c.gmid==j.id.toString())[0]
+        //     })
+        //     console.log(groupinfo)
+        // }
+        
+        
+        
         return(
             <div className="homepage">
             
@@ -55,19 +83,11 @@ class SearchPage extends Component{
             </div> 
            
 
+            
             <div className = "boxcontainer tile is-ancestor">
-                {this.state.searchedclasses.map(c =>{
+                {this.state.searchedclasses.map(c =>
                     //let a = this.props.joinedclasses.filter(j=> j.id === (c.gmid))
-                    for(let i = 0; i < this.props.joinedclasses.length; i++) {
-                        //console.log(this.props.joinedclasses[i])
-                        //console.log(c.gmid)
-                        if(this.props.joinedclasses[i].id === c.gmid) {
-                            console.log('equal')
-                            return  <Box c = {c} tok={this.props.tok} groupinfo={this.props.joinedclasses[i]}></Box>
-                        } else {
-                            return <Box c = {c} tok={this.props.tok}></Box>
-                        }
-                    }
+                    <Box c = {c} tok={this.props.tok} groupinfo={this.props.joinedclasses.filter(j=>{return j.id == c.gmid.toString()})}></Box>
                     // if (a.length >0){
                     //     return  <Box c = {c} tok={this.props.tok} groupinfo={a[0]}></Box>
                     // }
@@ -81,7 +101,7 @@ class SearchPage extends Component{
 
                     
                     //<Box c = {c} tok={this.props.tok}></Box>
-                }
+                
                     
                 )}
             </div>
