@@ -41,7 +41,7 @@ class SearchPage extends Component{
     
 
     render(){
-        //console.log(JSON.stringify(this.state.searchedclasses))
+        console.log(this.props.joinedclasses)
         return(
             <div className="homepage">
             
@@ -57,13 +57,23 @@ class SearchPage extends Component{
 
             <div className = "boxcontainer tile is-ancestor">
                 {this.state.searchedclasses.map(c =>{
-                    let a = this.props.joinedclasses.filter(j=> j.name === (c.id))
-                    if (a.length >0){
-                        return  <Box c = {c} tok={this.props.tok} groupinfo={a[0]}></Box>
+                    //let a = this.props.joinedclasses.filter(j=> j.id === (c.gmid))
+                    for(let i = 0; i < this.props.joinedclasses.length; i++) {
+                        //console.log(this.props.joinedclasses[i])
+                        //console.log(c.gmid)
+                        if(this.props.joinedclasses[i].id === c.gmid) {
+                            console.log('equal')
+                            return  <Box c = {c} tok={this.props.tok} groupinfo={this.props.joinedclasses[i]}></Box>
+                        } else {
+                            return <Box c = {c} tok={this.props.tok}></Box>
+                        }
                     }
-                    else{
-                        return <Box c = {c} tok={this.props.tok}></Box>
-                    }
+                    // if (a.length >0){
+                    //     return  <Box c = {c} tok={this.props.tok} groupinfo={a[0]}></Box>
+                    // }
+                    // else{
+                    //     return <Box c = {c} tok={this.props.tok}></Box>
+                    // }
                     
                     //console.log(a)
                     // a.length!=0 && <Box c = {c} tok={this.props.tok} groupinfo={a[0]}></Box>
