@@ -85,7 +85,7 @@ class SearchPage extends Component{
            
 
             
-            <div className = "boxcontainer tile is-ancestor">
+            <div className = "boxcontainer tile is-ancestor is-centered">
                 {this.state.searchedclasses.map(c =>
                     //let a = this.props.joinedclasses.filter(j=> j.id === (c.gmid))
                     <Box c = {c} tok={this.props.tok} groupinfo={this.props.joinedclasses.filter(j=>{return j.id == c.gmid.toString()})}></Box>
