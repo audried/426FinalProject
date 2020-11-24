@@ -33,17 +33,21 @@
   text-align: center;
 }
 .login{
-  margin-top:12%;
+  margin-top:5%;
 }
 .instructions{
   background-color: lightblue;
-  margin-left: 3%;
-  margin-right: 3%;
+  height: 100px;
+  align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  
 }
 .our_mission{
   background-color: lightblue;
-  margin-left: 3%;
-  margin-right: 3%;
+  align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 @keyframes App-logo-spin {
@@ -80,6 +84,7 @@
 .boxcontainer{
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
   margin-top: 3em;
   padding-top: 4em;
 }
@@ -142,4 +147,3 @@
   width: 350px;
   height: 230px;
 } 
- 
