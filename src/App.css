@@ -35,6 +35,11 @@
 .login{
   margin-top:12%;
 }
+.instructions{
+  background-color: lightblue;
+  margin-left: 3%;
+  margin-right: 3%;
+}
 
 @keyframes App-logo-spin {
   from {

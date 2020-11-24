@@ -105,6 +105,11 @@ class SearchPage extends Component{
                     
                 )}
             </div>
+            <div className="instructions">
+                    <br></br>
+                    <p className= "textbox" type = "text" id="instruc">Search for a COMP course (i.e. COMP 110, COMP 401, etc.). <br></br> Click the "click to join" button to be added to a GroupMe for that course!</p>
+                    <br></br>
+                </div>
 
 
             </div>
