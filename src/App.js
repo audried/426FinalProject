@@ -48,7 +48,7 @@ class App extends Component {
     
     {!this.state.loggedin &&
       <div className="login">
-        <a href = "https://oauth.groupme.com/oauth/authorize?client_id=Rfj6DQHczFqwTDipv0MF6eq9fpK8H3gj9bf4IKuplRB74Esj"> 
+        <a href = "https://oauth.groupme.com/oauth/authorize?client_id=kcdctwzR1fnLazNEZo0C2W9pNdrjceoFqZ07h5hTQO0W80Dr"> 
           <button className="button is-info" >Sign in with GroupMe</button>
         </a> 
       </div>
