@@ -105,9 +105,20 @@ class SearchPage extends Component{
                     
                 )}
             </div>
+            <div className="our_mission">
+                    <br></br>
+                    <p className= "textbox" type = "text" id="mission">We recognize that the connections, resources, and peer-support that many students benefit from are not accessible to everyone.  <br></br> 
+                    We celebrate the different circumstances and backgrounds that have led each of you to where you are today: to a community that shares a passion for computer science and cultivates an environment of encouragement and growth. <br></br>
+                    Now, the connections and support that you need to succeed are more accessible than ever. </p>
+                    <br></br>
+                </div> 
+                <div>
+                    <br></br>
+                </div>
+
             <div className="instructions">
                     <br></br>
-                    <p className= "textbox" type = "text" id="instruc">Search for a COMP course (i.e. COMP 110, COMP 401, etc.). <br></br> Click the "click to join" button to be added to a GroupMe for that course!</p>
+                    <p className= "textbox" type = "text" id="instruc">In the search box above, search for a COMP course (i.e. COMP 110, COMP 401, etc.). <br></br> Click the "click to join" button to be added to a GroupMe for that course with your classmates!</p>
                     <br></br>
                 </div>
 

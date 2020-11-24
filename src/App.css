@@ -40,6 +40,11 @@
   margin-left: 3%;
   margin-right: 3%;
 }
+.our_mission{
+  background-color: lightblue;
+  margin-left: 3%;
+  margin-right: 3%;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -128,7 +133,6 @@
 }
 
 .tile.is-parent.is-4 {
-  background-color: lightgrey;
   width: 375px;
   height: 230px;
   margin: 10px;
