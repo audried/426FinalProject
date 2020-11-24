@@ -44,8 +44,8 @@ class Box extends Component{
     render(){
         return(
 
-            <div className="tile is-parent is-4">
-                <article className="tile is-child box">
+            <div className="tile is-parent is-4 is-centered">
+                <article className="tile is-child is-centered box">
                     <p className="title">{this.props.c.id}</p>
                     <p className="subtitle">{this.props.c.name} </p>
                     
