@@ -29,6 +29,12 @@
 .App-link {
   color: #61dafb;
 }
+.appcontainer{
+  text-align: center;
+}
+.login{
+  margin-top:12%;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -38,6 +44,19 @@
     transform: rotate(360deg);
   }
 }
+
+@media screen and (min-width: 769px) {
+  .tile.is-parent.is-4 {
+    display: block;
+  }
+  .boxcontainer {
+    display: block;
+  }
+  .tile.is-child.box {
+    display: block;
+  }
+}
+
 
 .homepage{
   display:flex;
@@ -73,7 +92,6 @@
   display: flex;
   height: 80px;
   padding-left: 20px;
-
 }
 
 #search {
@@ -96,3 +114,22 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
 }
+
+#joined{
+  background-color: #13294B;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.tile.is-parent.is-4 {
+  background-color: lightgrey;
+  width: 375px;
+  height: 230px;
+  margin: 10px;
+}
+
+.tile.is-child.box {
+  width: 350px;
+  height: 230px;
+} 
